@@ -1,0 +1,43 @@
+{
+  "files.autoSave": "onFocusChange",
+  "terminal.integrated.rendererType": "dom",
+  "editor.minimap.enabled": true,
+  "window.zoomLevel": 0,
+  "editor.fontSize": 16,
+  "editor.wordWrap": "on",
+  "workbench.iconTheme": "vscode-icons",
+  "liveServer.settings.CustomBrowser": "chrome",
+  "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+  "breadcrumbs.enabled": true,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "emmet.syntaxProfiles": {
+    "javascript": "jsx"
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "editor.autoClosingOvertype": "always",
+  "eslint.options": {},
+  "eslint.validate": [],
+  "prettier.trailingComma": "all",
+  "emmet.excludeLanguages": ["markdown"],
+  "files.associations": {
+    "*.jsx": "javascriptreact",
+    "*.js": "javascript"
+  },
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.editorAssociations": [],
+  "prettier.singleQuote": true,
+  "prettier.useEditorConfig": false,
+  "editor.formatOnSave": true,
+  "vsicons.dontShowNewVersionMessage": true
+}
