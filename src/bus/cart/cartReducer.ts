@@ -21,10 +21,23 @@ export const cartReducer = (
 ): CartItemsInitialStateProps => {
   switch (action.type) {
     case CartTypes.CART_ADD:
-      return {
-        cartItems: [...state.cartItems, action.payload],
-      };
-
+      const existItem = state.cartItems.find(
+        (item) => item.id === action.payload.id,
+      );
+      if (existItem) {
+        return {
+          cartItems:
+            state.cartItems.length > 0
+              ? state.cartItems.map((item) =>
+                  item.id === action.payload.id ? action.payload : item,
+                )
+              : [...state.cartItems, action.payload],
+        };
+      } else {
+        return {
+          cartItems: [...state.cartItems, action.payload],
+        };
+      }
     case CartTypes.CART_CLEAR:
       return initialState;
     default:
