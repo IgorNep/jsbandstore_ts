@@ -10,4 +10,12 @@ interface CartItemsClearAction {
   type: CartTypes.CART_CLEAR;
 }
 
-export type Action = CartItemsAddAction | CartItemsClearAction;
+interface CartItemDeleteAction {
+  type: CartTypes.CART_ITEM_DELETE;
+  payload: string | number;
+}
+
+export type Action =
+  | CartItemsAddAction
+  | CartItemsClearAction
+  | CartItemDeleteAction;

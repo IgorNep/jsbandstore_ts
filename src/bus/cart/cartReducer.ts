@@ -7,7 +7,7 @@ export interface CartItemProps {
   qty: number;
   title: string;
 }
-interface CartItemsInitialStateProps {
+export interface CartItemsInitialStateProps {
   cartItems: CartItemProps[];
 }
 
@@ -38,6 +38,10 @@ export const cartReducer = (
           cartItems: [...state.cartItems, action.payload],
         };
       }
+    case CartTypes.CART_ITEM_DELETE:
+      return {
+        cartItems: state.cartItems.filter((item) => item.id !== action.payload),
+      };
     case CartTypes.CART_CLEAR:
       return initialState;
     default:

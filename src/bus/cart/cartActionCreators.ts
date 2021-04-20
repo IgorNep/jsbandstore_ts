@@ -12,3 +12,9 @@ export const addBookToCart = (book: CartItemProps) => (
 export const clearCart = () => (dispatch: Dispatch<Action>) => {
   dispatch({ type: CartTypes.CART_CLEAR });
 };
+
+export const deleteItemFromCart = (id: string) => (
+  dispatch: Dispatch<Action>,
+) => {
+  dispatch({ type: CartTypes.CART_ITEM_DELETE, payload: id });
+};
